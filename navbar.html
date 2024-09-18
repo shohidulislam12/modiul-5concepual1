@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav >
+<ul id="ul " style="display: flex; margin: 20px; gap: 10px; padding: 4px; justify-content: space-around; list-style: none;">
+   <li id="list-1" class="list">all</li>
+   <li id="list-1" class="list">Politics</li>
+   <li id="list-1" class="list">Entertainment</li>
+   <li id="list-1" class="list">Education</li>
+   <li id="list-1" class="list">Music</li>
+</ul>
+    </nav>
+    <section>
+
+
+    </section>
+<script>
+const lists=document.getElementsByTagName('li');
+let lastClick=null;
+for(const list of lists){
+    list.addEventListener('click',function(){
+
+if(lastClick==null){
+    list.style.backgroundColor='red';
+    list.style.padding='10px';
+    lastClick=list;
+
+}
+else{
+ lastClick.style.backgroundColor='';
+    lastClick.style.padding='';
+    list.style.backgroundColor='red';
+    list.style.padding='10px';
+    lastClick=list;
+}
+
+    })
+}
+
+
+
+</script>
+
+
+
+
+    <!-- <script src="nav.js"></script> -->
+</body>
+</html>
